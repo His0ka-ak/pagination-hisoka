@@ -37,7 +37,10 @@ public class ProductDao {
 			while (rs.next()) {
 				p = new Product(rs.getInt("prod_id"), rs.getString("prod_name"), rs.getDouble("price"),
 						rs.getInt("quantity"));
+				
+				
 				products.add(p);
+				System.out.println("products hogaye load");
 			}
 			return products;
 
